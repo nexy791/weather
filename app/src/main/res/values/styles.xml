@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.SimpleWeatherApp.HeadLine6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/rubik_bold</item>
+    </style>
+
+    <style name="Theme.SimpleWeatherApp.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/rubik_medium</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogBodyTextStyle">@style/Theme.Body</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Theme.Title</item>
+        <item name="materialButtonStyle">@style/Theme.Button</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Dialog.Rounded</item>>
+    </style>
+
+    <style name="Theme.Button" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="fontFamily">@font/rubik_bold</item>
+    </style>
+
+    <style name="Theme.Title" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="fontFamily">@font/rubik_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/rubik</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Dialog.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+</resources>

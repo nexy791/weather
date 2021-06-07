@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SimpleWeatherApp</string>
+    <string name="infoTemp">Temperature</string>
+    <string name="infoFeelLikes">Feels like</string>
+    <string name="infoWind">Wind</string>
+    <string name="infoHumidity">Humidity</string>
+    <string name="infoCloudy">Cloudy</string>
+    <string name="infoUV">UV Index</string>
+    <string name="actionRetry">Retry</string>
+    <string name="checkConnection">Check your connection</string>
+    <string name="checkGit">Check our GitHub page</string>
+    <string name="actionOpen">Open</string>
+    <string name="titleMessage">Do you really want to exit?</string>
+    <string name="titleCancel">Cancel</string>
+    <string name="titleExit">Exit</string>
+    <string name="titleWeather">Weather</string>
+    <string name="the_weather_today">The weather today:</string>
+    <string name="itemInfo">Info</string>
+</resources>

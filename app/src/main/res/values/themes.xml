@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Splash" parent="Theme.SimpleWeatherApp">
+        <item name="android:windowBackground">@drawable/splash_centered</item>
+    </style>
+
+    <style name="Theme.SimpleWeatherApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/darkBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/darkRed</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="textAllCaps">false</item>
+
+        <item name="textAppearanceHeadline6">@style/Theme.SimpleWeatherApp.HeadLine6</item>
+
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlHighlight">@color/black</item>
+
+        <item name="materialAlertDialogTheme">@style/AlertDialogTheme</item>
+
+    </style>
+</resources>

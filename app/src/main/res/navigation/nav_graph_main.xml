@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.ribsky.simpleweatherapp.ui.day.FragmentDay"
+        android:label="FragmentMain">
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentInfo"
+            app:destination="@id/fragmentInfo"
+            app:enterAnim="@anim/anim_enter"
+            app:exitAnim="@anim/anim_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInfo"
+        android:name="com.ribsky.simpleweatherapp.ui.days.FragmentDays"
+        android:label="FragmentInfo">
+        <action
+            android:id="@+id/action_fragmentInfo_to_fragmentMain"
+            app:destination="@id/fragmentMain"
+            app:enterAnim="@anim/anim_enter"
+            app:exitAnim="@anim/anim_exit" />
+    </fragment>
+</navigation>
