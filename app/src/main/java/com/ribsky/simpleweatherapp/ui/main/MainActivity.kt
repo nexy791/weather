@@ -38,15 +38,15 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         navController =
             (supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment).navController
 
-        binding.btnMaterial.setOnClickListener {
+        binding.btnChangeFragment.setOnClickListener {
             when (navController.currentDestination?.id) {
                 R.id.fragmentMain -> {
                     navController.navigate(R.id.action_fragmentMain_to_fragmentInfo)
-                    binding.btnMaterial.setImageResource(R.drawable.ic_round_keyboard_arrow_left_24)
+                    binding.btnChangeFragment.setImageResource(R.drawable.ic_round_keyboard_arrow_left_24)
                 }
                 R.id.fragmentInfo -> {
                     navController.navigate(R.id.action_fragmentInfo_to_fragmentMain)
-                    binding.btnMaterial.setImageResource(R.drawable.ic_round_keyboard_arrow_right_24)
+                    binding.btnChangeFragment.setImageResource(R.drawable.ic_round_keyboard_arrow_right_24)
                 }
             }
         }
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                                 )
                             )
                         }
-                        anchorView = binding.btnMaterial
+                        anchorView = binding.btnChangeFragment
                         show()
                     }
                 return true

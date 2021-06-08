@@ -3,19 +3,14 @@ package com.ribsky.simpleweatherapp.ui.day
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.ribsky.simpleweatherapp.model.day.DayModel
 import com.ribsky.simpleweatherapp.repository.Repository
 import com.ribsky.simpleweatherapp.util.Const.LoadingStatus
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 
 class FragmentDayViewModel : ViewModel() {
-
-    private var viewModelJob = Job()
-    private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
 
     private val _status = MutableLiveData<LoadingStatus>()
     private val _day = MutableLiveData<List<DayModel>>()
@@ -36,7 +31,7 @@ class FragmentDayViewModel : ViewModel() {
 
     fun getWeatherForToday() {
         _status.value = LoadingStatus.LOADING
-        coroutineScope.launch {
+        viewModelScope.launch {
             val day = Repository.getInstance().getDayInfo()
             if (!day.isNullOrEmpty()) {
                 _city.value = Repository.getInstance().getCity()
@@ -44,10 +39,5 @@ class FragmentDayViewModel : ViewModel() {
                 _day.value = day
             } else _status.value = LoadingStatus.ERROR
         }
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        viewModelJob.cancel()
     }
 }
