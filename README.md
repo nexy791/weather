@@ -24,6 +24,7 @@ A simple app for viewing the weather. Download the apk file by following [this l
 * Retrofit2
 * Room
 * Coroutines
+* Jetpack
 
 ### 2. Libraries
 
