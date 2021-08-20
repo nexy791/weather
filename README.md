@@ -25,6 +25,7 @@ A simple app for viewing the weather. Download the apk file by following [this l
 * Room
 * Coroutines
 * Jetpack
+* View/Data binding
 
 ### 2. Libraries
 
